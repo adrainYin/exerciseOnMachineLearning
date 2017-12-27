@@ -37,6 +37,6 @@ print(classify)
 decisionTree.storeTree(tree,"CH03_data/classifyTree.txt")
 print(decisionTree.getTree("CH03_data/classifyTree.txt"))
 
-# dir = [{'my':'vczh is the god','you':'I am a god too'},'helloshanghai',1,4.554]
-# decisionTree.storeTree(dir,"CH03_data/classifyTree.txt")
-# print(decisionTree.getTree("CH03_data/classifyTree.txt"))
+dir = [{'my':'vczh is the god','you':'I am a god too'},'helloshanghai',1,4.554]
+decisionTree.storeTree(dir,"CH03_data/testJSON.txt")
+print(decisionTree.getTree("CH03_data/testJSON.txt"))
