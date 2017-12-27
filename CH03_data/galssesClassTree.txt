@@ -1,0 +1,1 @@
+{"tearRate": {"reduced": "no lenses", "normal": {"astigmatic": {"yes": {"prescript": {"hyper": {"age": {"pre": "no lenses", "presbyopic": "no lenses", "young": "hard"}}, "myope": "hard"}}, "no": {"age": {"pre": "soft", "presbyopic": {"prescript": {"hyper": "soft", "myope": "no lenses"}}, "young": "soft"}}}}}}
