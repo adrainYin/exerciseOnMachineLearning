@@ -48,5 +48,3 @@ def classify(dataSet,testVec):
     prodForLabel = sorted(prodForLabel.items(), key=operator.itemgetter(1),reverse=True)
 
     return prodForLabel,classifyList
-
-
