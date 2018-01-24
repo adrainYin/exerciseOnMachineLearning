@@ -1,5 +1,5 @@
 from numpy import *
-import os
+import random
 
 
 def loadData2Vertex():
@@ -47,7 +47,7 @@ def trainingBayes(trainMartix,trainCategory):
     p0Vec = log(p0num / p0denom)
     return p1Vec,p0Vec,pAbusive  #返回值也是向量，返回的是概率向量
 
-def bayesCLassify(vec2CLassify,p0vec,p1vec,pClass):
+def bayesCLassify(vec2CLassify,p1vec,p0vec,pClass):
     p1 = sum(vec2CLassify * p1vec) + log(pClass)  #分类向量与概率向量的相乘
     p0 = sum(vec2CLassify * p0vec) + log(1.0 - pClass)
     if p1 > p0:
@@ -68,5 +68,45 @@ def testingBayes(): #预测函数
     testVec = setWords2Vec(vocaSet,testEntry)
     print("classify as "  , bayesCLassify(testVec,p0Vec,p1Vec,pAb))
 
+#用正则表达式切分字符串
+def textParse(string):
+    import re
+    stringList = re.split(r'\W*',string)
+    return [tok.lower() for tok in stringList if len(tok) > 2]
 
 
+def spamText():
+    docList = []
+    classList = []
+    fullText = []
+    for i in range(25):
+        wordText = textParse(open('CH04_data/spam/%d.txt' % (i+1)).read()) #读文件，使用通配符
+        docList.append(wordText)
+        fullText.extend(wordText)
+        classList.append(1) #默认的是而分类的类型
+        wordText = textParse(open('CH04_data/ham/%d.txt' % (i+1)).read())
+        docList.append(wordText)
+        fullText.extend(wordText)
+        classList.append(0)
+        vocList = createZVocaList(docList)
+
+    #选择交叉验证集
+    trainingSet = list(range(50)) #python3.x的改动，冉哥返回的是range对象，需要数组则需要加list()
+    testSet = []  #返回的是所有的测试集的序号
+    for i in range(10):
+        index = int(random.uniform(0,len(trainingSet)))
+        testSet.append(trainingSet[index])
+        del(trainingSet[index])
+    trainMat = []  #所有的训练数据
+    trainCLass = [] #所有的训练的标签
+    for docIndex in testSet:
+        trainMat.append(setWords2Vec(vocList,docList[docIndex]))
+        trainCLass.append(classList[docIndex])
+    p1Vec,p0Vec,pAb = trainingBayes(array(trainMat),array(trainCLass))  #转换为numpy中的数组类型
+    errorCount = 0.0
+    for testIndex in testSet:
+        testVec = setWords2Vec(vocList,docList[testIndex])
+        if (bayesCLassify(testVec,p1Vec,p0Vec,pAb) != classList[testIndex]):
+            errorCount += 1
+    #print('错误率是 ', float(errorCount / len(classList)))
+    return float(errorCount / len(classList))
