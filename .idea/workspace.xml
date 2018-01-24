@@ -2,9 +2,59 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87b3e8d9-31db-4c0b-887b-736152f04b3b" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/Bayes.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/1.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/10.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/11.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/12.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/13.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/14.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/15.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/16.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/17.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/18.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/19.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/2.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/20.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/21.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/22.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/23.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/24.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/25.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/3.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/4.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/5.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/6.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/7.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/8.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/9.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/1.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/10.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/11.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/12.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/13.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/14.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/15.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/16.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/17.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/18.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/19.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/2.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/20.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/21.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/22.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/23.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/24.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/25.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/3.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/4.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/5.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/6.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/7.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/8.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/9.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/TestForBayes.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/CH03_data/classifyTree.txt" afterPath="$PROJECT_DIR$/CH03_data/classifyTree.txt" />
-      <change beforePath="$PROJECT_DIR$/output.py" afterPath="$PROJECT_DIR$/output.py" />
       <change beforePath="$PROJECT_DIR$/simpleBayse.py" afterPath="$PROJECT_DIR$/simpleBayse.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,6 +75,7 @@
     <SUITE FILE_PATH="coverage/TestTensorFlow$KNN.coverage" NAME="KNN Coverage Results" MODIFIED="1512530045241" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/TestTensorFlow$Run.coverage" NAME="Run Coverage Results" MODIFIED="1512529923438" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/TestTensorFlow$HelloTensorFlow.coverage" NAME="HelloTensorFlow Coverage Results" MODIFIED="1511269466511" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/exercise_on_machine_learning$TestForBayes.coverage" NAME="TestForBayes Coverage Results" MODIFIED="1516785761264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -46,8 +97,8 @@
       <file leaf-file-name="plotTree.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plotTree.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2178">
-              <caret line="123" column="17" lean-forward="false" selection-start-line="123" selection-start-column="17" selection-end-line="123" selection-end-column="17" />
+            <state relative-caret-position="420">
+              <caret line="123" column="44" lean-forward="false" selection-start-line="123" selection-start-column="44" selection-end-line="123" selection-end-column="44" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -55,11 +106,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KNN.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/KNN.py">
+      <file leaf-file-name="Bayes.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Bayes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="31" column="55" lean-forward="false" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
+            <state relative-caret-position="198">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -67,23 +118,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="simpleBayse.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/simpleBayse.py">
+      <file leaf-file-name="TestForBayes.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TestForBayes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="44" column="14" lean-forward="false" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="216">
+              <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="output.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="simpleBayse.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/simpleBayse.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="output.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/output.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="29" column="2" lean-forward="true" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="2" />
+            <state relative-caret-position="684">
+              <caret line="40" column="7" lean-forward="false" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -104,11 +163,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mainTest.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mainTest.py">
+      <file leaf-file-name="HelloTensorFlow.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HelloTensorFlow.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+            <state relative-caret-position="270">
+              <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -117,7 +176,7 @@
       <file leaf-file-name="decisionTree.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/decisionTree.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2502">
+            <state relative-caret-position="510">
               <caret line="142" column="8" lean-forward="false" selection-start-line="142" selection-start-column="8" selection-end-line="142" selection-end-column="8" />
               <folding />
             </state>
@@ -173,6 +232,8 @@
         <option value="$PROJECT_DIR$/mainTest.py" />
         <option value="$PROJECT_DIR$/output.py" />
         <option value="$PROJECT_DIR$/simpleBayse.py" />
+        <option value="$PROJECT_DIR$/TestForBayes.py" />
+        <option value="$PROJECT_DIR$/Bayes.py" />
       </list>
     </option>
   </component>
@@ -231,6 +292,11 @@
               <item name="exercise on machine learning" type="b2602c69:ProjectViewProjectNode" />
               <item name="exercise on machine learning" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="exercise on machine learning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="exercise on machine learning" type="462c0819:PsiDirectoryNode" />
+              <item name="CH04_data" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -267,6 +333,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/CH04_data" />
       <recent name="$PROJECT_DIR$/CH03_data" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/CH02_data" />
@@ -285,7 +352,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.mainTest">
+  <component name="RunManager" selected="Python.TestForBayes">
     <configuration name="KNN" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -305,7 +372,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="Run" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="TestForBayes" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -318,7 +385,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="TestTensorFlow" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Run.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TestForBayes.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -382,19 +449,19 @@
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.Run" />
-      <item index="1" class="java.lang.String" itemvalue="Python.KNN" />
-      <item index="2" class="java.lang.String" itemvalue="Python.mypolygon" />
-      <item index="3" class="java.lang.String" itemvalue="Python.output" />
-      <item index="4" class="java.lang.String" itemvalue="Python.mainTest" />
+      <item index="0" class="java.lang.String" itemvalue="Python.KNN" />
+      <item index="1" class="java.lang.String" itemvalue="Python.mypolygon" />
+      <item index="2" class="java.lang.String" itemvalue="Python.output" />
+      <item index="3" class="java.lang.String" itemvalue="Python.mainTest" />
+      <item index="4" class="java.lang.String" itemvalue="Python.TestForBayes" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.mainTest" />
-        <item index="1" class="java.lang.String" itemvalue="Python.output" />
-        <item index="2" class="java.lang.String" itemvalue="Python.mypolygon" />
-        <item index="3" class="java.lang.String" itemvalue="Python.KNN" />
-        <item index="4" class="java.lang.String" itemvalue="Python.Run" />
+        <item index="0" class="java.lang.String" itemvalue="Python.TestForBayes" />
+        <item index="1" class="java.lang.String" itemvalue="Python.mainTest" />
+        <item index="2" class="java.lang.String" itemvalue="Python.output" />
+        <item index="3" class="java.lang.String" itemvalue="Python.mypolygon" />
+        <item index="4" class="java.lang.String" itemvalue="Python.KNN" />
       </list>
     </recent_temporary>
   </component>
@@ -433,7 +500,14 @@
       <option name="project" value="LOCAL" />
       <updated>1515228760402</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update">
+      <created>1516513306234</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1516513306234</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -450,18 +524,18 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26723096" sideWeight="0.50572246" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.116595134" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="0" y="0" width="310" height="700" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26723096" sideWeight="0.49427754" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.116595134" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="0" y="0" width="310" height="700" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28053203" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27932286" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26723096" sideWeight="0.49427754" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29041487" sideWeight="0.49339935" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16237482" sideWeight="0.49339935" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.069384836" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39903265" sideWeight="0.49713877" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22246066" sideWeight="0.5066007" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39903265" sideWeight="0.49713877" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="SFDX" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -492,6 +566,9 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -504,62 +581,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/input_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="28" column="29" lean-forward="true" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HelloTensorFlow.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2278">
-          <caret line="138" column="7" lean-forward="false" selection-start-line="138" selection-start-column="7" selection-end-line="138" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HelloTensorFlow.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2278">
-          <caret line="138" column="7" lean-forward="true" selection-start-line="138" selection-start-column="7" selection-end-line="138" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HelloTensorFlow.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="21" lean-forward="false" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HelloTensorFlow.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/Cellar/python3/3.6.3/Frameworks/Python.framework/Versions/3.6/lib/python3.6/urllib/request.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-10076">
@@ -658,13 +679,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HelloTensorFlow.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="52" column="19" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CH02_data/testSet.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -723,13 +737,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scraptest.py" />
     <entry file="file://$PROJECT_DIR$/scipytest.py" />
-    <entry file="file://$PROJECT_DIR$/mypolygon.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/input_data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="334">
@@ -773,26 +780,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plotTree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2178">
-          <caret line="123" column="17" lean-forward="false" selection-start-line="123" selection-start-column="17" selection-end-line="123" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/KNN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="31" column="55" lean-forward="false" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CH03_data/classifyTree.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -801,35 +788,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/update.patch" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mainTest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/decisionTree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2502">
-          <caret line="142" column="8" lean-forward="false" selection-start-line="142" selection-start-column="8" selection-end-line="142" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -842,22 +804,147 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/simpleBayse.py">
+    <entry file="file://$PROJECT_DIR$/output.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="44" column="14" lean-forward="false" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
+        <state relative-caret-position="684">
+          <caret line="40" column="7" lean-forward="false" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
           <folding>
-            <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/output.py">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HelloTensorFlow.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="29" column="2" lean-forward="true" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="2" />
+        <state relative-caret-position="270">
+          <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KNN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="138" column="14" lean-forward="false" selection-start-line="138" selection-start-column="14" selection-end-line="138" selection-end-column="14" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mypolygon.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plotTree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="123" column="44" lean-forward="false" selection-start-line="123" selection-start-column="44" selection-end-line="123" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CH04_data/ham/1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CH04_data/ham/2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CH04_data/ham/20.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CH04_data/spam/1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="29" lean-forward="true" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CH04_data/spam/20.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CH04_data/ham/8.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/decisionTree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="142" column="8" lean-forward="false" selection-start-line="142" selection-start-column="8" selection-end-line="142" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simpleBayse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestForBayes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bayes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>

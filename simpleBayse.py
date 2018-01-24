@@ -1,4 +1,4 @@
-import numpy
+from numpy import *
 import operator
 
 def file2list(filename):
