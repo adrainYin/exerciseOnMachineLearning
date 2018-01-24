@@ -2,60 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87b3e8d9-31db-4c0b-887b-736152f04b3b" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Bayes.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/1.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/10.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/11.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/12.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/13.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/14.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/15.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/16.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/17.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/18.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/19.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/2.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/20.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/21.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/22.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/23.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/24.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/25.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/3.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/4.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/5.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/6.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/7.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/8.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/ham/9.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/1.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/10.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/11.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/12.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/13.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/14.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/15.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/16.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/17.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/18.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/19.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/2.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/20.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/21.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/22.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/23.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/24.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/25.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/3.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/4.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/5.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/6.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/7.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/8.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CH04_data/spam/9.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/TestForBayes.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/simpleBayse.py" afterPath="$PROJECT_DIR$/simpleBayse.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -507,7 +454,14 @@
       <option name="project" value="LOCAL" />
       <updated>1516513306234</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add Bayes">
+      <created>1516785967643</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1516785967644</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -562,7 +516,8 @@
     <MESSAGE value="add a test on json" />
     <MESSAGE value="add simpleBayse" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="add Bayes" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Bayes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
