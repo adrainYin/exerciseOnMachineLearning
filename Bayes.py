@@ -24,8 +24,8 @@ def setWords2Vec(vocaList,inputSet):
     for words in inputSet:
         if words in vocaList:
             retuenVec[vocaList.index(words)] += 1  #list列表的index方法，返回该元素在list中的下标，否则抛出空指针异常
-        else:
-            print("this word in not in the vocaList")
+        # else:
+        #     print("this word in not in the vocaList")
     return retuenVec #返回单词向量的单词存在表
 
 def trainingBayes(trainMartix,trainCategory):
@@ -99,7 +99,7 @@ def spamText():
         del(trainingSet[index])
     trainMat = []  #所有的训练数据
     trainCLass = [] #所有的训练的标签
-    for docIndex in testSet:
+    for docIndex in trainingSet:
         trainMat.append(setWords2Vec(vocList,docList[docIndex]))
         trainCLass.append(classList[docIndex])
     p1Vec,p0Vec,pAb = trainingBayes(array(trainMat),array(trainCLass))  #转换为numpy中的数组类型
@@ -110,3 +110,68 @@ def spamText():
             errorCount += 1
     #print('错误率是 ', float(errorCount / len(classList)))
     return float(errorCount / len(classList))
+
+
+def calcMostFreq(vocaList,fullText):
+    import operator
+    freqDict = {}
+    for token in vocaList:
+        freqDict[token] = fullText.count(token)
+    sortedFreq = sorted(freqDict.items(),key=operator.itemgetter(1),reverse=True) #将字典逆序排列
+    return sortedFreq[:30]  #输出前30个
+
+def localWords(feed1,feed0):
+    import feedparser
+    docList = []; classList = []; fullText = []
+    minLen = min(len(feed1['entries']),len(feed0['entries']))
+    for i in range(minLen):
+        wordList = textParse(feed1['entries'][i]['summary'])  #textPrase是什么意思
+        docList.append(wordList)
+        fullText.extend(wordList)
+        classList.append(1)
+        wordList = textParse(feed0['entries'][i]['summary'])
+        docList.append(wordList)
+        fullText.extend(wordList)
+        classList.append(0)
+    vocabList = createZVocaList(docList)
+    top30Words = calcMostFreq(vocabList,fullText)
+    for dict in top30Words:
+        if dict[0] in vocabList : vocabList.remove(dict[0])
+    trainingSet = list(range(2 * minLen))
+    testSet = []
+    for i in range(20):
+        randIndex = int(random.uniform(0,len(trainingSet)))
+        testSet.append(trainingSet[randIndex])  #返回的是序号，即是docList的指针
+        del[trainingSet[randIndex]]
+    trainMat = []
+    trainCLass = []
+    for docIndex in trainingSet:
+        trainMat.append(setWords2Vec(vocabList,docList[docIndex]))
+        trainCLass.append(classList[docIndex])
+    p1Vec,p0Vec,pAb = trainingBayes(array(trainMat),array(trainCLass))
+    errorCount = 0.0
+    for test in testSet:
+        wordList = setWords2Vec(vocabList,docList[test])
+        if (bayesCLassify(wordList,p1Vec,p0Vec,pAb) != classList[test]):
+            errorCount += 1
+    error = float(errorCount / len(testSet))
+    print('错误率是' , error)
+    return vocabList,p0Vec,p1Vec
+
+
+def getTopWords(ny,sf):
+    import operator
+    vocabList,p0Vec,p1Vec = localWords(ny,sf)
+    topNY = []
+    topSF = []
+    for i in range(len(p0Vec)):
+        if p0Vec[i] > -6.0 :topSF.append((vocabList[i],p0Vec[i]))
+        if p1Vec[i] > -6.0 :topNY.append((vocabList[i],p1Vec[i]))
+        sortedSF = sorted(topSF,key=lambda pair:pair[1],reverse=True)
+        print('SF**SF**SF**SF**SF**SF**SF**SF**SF**SF**SF**SF**SF**SF**SF')
+        for item in sortedSF:
+            print(item[0])
+        sortedNY = sorted(topNY,key=lambda  pair:pair[1],reverse=True)
+        print('NY**NY**NY**NY**NY**NY**NY**NY**NY**NY**NY**NY**NY**NY**NY')
+        for item in sortedNY:
+            print(item[0])
