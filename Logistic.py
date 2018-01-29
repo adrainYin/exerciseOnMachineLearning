@@ -29,6 +29,7 @@ def gradAscent(dataMat,labelMat):
     return weights
 
 #画出曲线
+#mat函数是转换矩阵函数，array是转换numpy数组的函数。getA()是将矩阵转换为nunpy数组的函数 mat和array可以相互转换
 def plotBestFit(weigths):
     import matplotlib.pyplot as plt
     dataMat , labelMat = loadDataSet()
