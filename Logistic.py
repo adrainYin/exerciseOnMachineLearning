@@ -56,3 +56,30 @@ def plotBestFit(weigths):
     plt.xlabel('X1')
     plt.ylabel('X2')
     plt.show()
+
+#随机梯度下降法
+def dtocGradAscent0(dataMatrix , classLabel):
+    m,n = shape(dataMatrix)
+    alpha = 0.01
+    weigths = ones(n)  #返回的是矩阵吗
+    for i in range(m):
+        h = sigmoid(sum(dataMatrix[i] * weigths))
+        error = classLabel[i] - h
+        weigths = weigths + alpha * error * dataMatrix[i]
+    return weigths
+
+#加入参数修正的随机梯度上升法
+def stocGradscent1(dataMatrix , labelClass , numIter = 150):#迭代次数参数的150是缺省值，如果不输入的话那么默认的迭代次数就是150
+    m,n = shape(dataMatrix)
+    weigths = ones(n)
+    for j in range(numIter):
+        dataIndex = list(range(m))  #加入随机取样的环节
+        for i in range(m):
+            alpha = 4 / (1.0 + j + i) + 0.01 #alpha是变长属性，并且随着迭代次数的增多，步长会越来越小
+            randIndex = int(random.uniform(0,len(dataIndex)))
+            h = sigmoid(sum(dataMatrix[randIndex] * weigths))
+            error = labelClass[randIndex]  - h
+            weigths = weigths + alpha * error * dataMatrix[randIndex]
+            del(dataIndex[randIndex])
+    return weigths
+
