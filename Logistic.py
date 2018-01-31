@@ -83,7 +83,7 @@ def stocGradscent1(dataMatrix , labelClass , numIter = 150):#迭代次数参数�
             del(dataIndex[randIndex])
     return weigths
 
-#真是案例，预测马的疝气死亡率
+#真实案例，预测马的疝气死亡率
 def classifyVector(inX , weigths):
     prob = sigmoid(sum(inX * weigths))
     if prob > 0.5:
