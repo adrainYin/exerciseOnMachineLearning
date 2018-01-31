@@ -76,7 +76,7 @@ def stocGradscent1(dataMatrix , labelClass , numIter = 150):#迭代次数参数�
         dataIndex = list(range(m))  #加入随机取样的环节
         for i in range(m):
             alpha = 4 / (1.0 + j + i) + 0.01 #alpha是变长属性，并且随着迭代次数的增多，步长会越来越小
-            randIndex = int(random.uniform(0,len(dataIndex)))
+            randIndex = int(random.uniform(0,len(dataIndex))) #用len()的原因是因为每次删除列表中的元素后，列表的长度都要变化，这样避免选择到空指针的情况
             h = sigmoid(sum(dataMatrix[randIndex] * weigths))
             error = labelClass[randIndex]  - h
             weigths = weigths + alpha * error * dataMatrix[randIndex]
@@ -90,4 +90,44 @@ def classifyVector(inX , weigths):
         return 1.0
     else:
         return 0.5
+
+def coliTest():
+    frTrain = open('CH05_data/horseColicTraining.txt')
+    frTest = open('Ch05_data/horseColicTest.txt')
+    trainingSet = []
+    trainingLabel = []
+    for lines in frTrain.readlines():
+        currLine = lines.strip().split('\t')
+        lineArr = []
+        for i in range(21): #从0到20
+            lineArr.append(float(currLine[i]))
+        trainingSet.append(lineArr)
+        trainingLabel.append(float(currLine[21]))
+    trainingWeigths = stocGradscent1(array(trainingSet),array(trainingLabel),1000)   #调用随机梯度下降函数
+    errorCount = 0
+    numTestVec = 0.0
+    for line in frTest.readlines():
+        numTestVec += 1.0 #记录测试样本的总数
+        thisLine = line.strip().split('\t')
+        lineArr = []
+        #不同处理缺失的值，因为缺失值默认用0填充
+        for i in range(21):
+            lineArr.append(float(thisLine[i]))
+        if (classifyVector(array(lineArr),trainingWeigths) != int(thisLine[21])):
+            errorCount += 1
+    errorRate = (float(errorCount) / numTestVec)
+    print('测试集的错误率是%f' % errorRate)
+    return errorRate
+
+#选取不同的测试集进行测试
+def muliTest():
+    numTest = 10
+    errorSum  = 0.0
+    for k in range(numTest):
+        errorSum += coliTest()
+    print('在 %d次迭代后的错误率是 %f' %(numTest,float(errorSum / numTest)))
+    return float(errorSum / numTest)
+
+
+
 
