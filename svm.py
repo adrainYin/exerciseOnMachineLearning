@@ -1,6 +1,4 @@
 from numpy import *
-import math
-
 
 #该函数的作用是从文件中读取指定的数据，并转换为数据集合和标签集合
 def loadDataSet (filename):
@@ -96,7 +94,7 @@ def smosimple(dataMatIN , classLabels , C , toler , maxIter):
             if((0 < alphas[i]) and (C > alphas[i])): b = b1
             elif((0 < alphas[j]) and (C > alphas[j])): b = b2
             else: b = (b1 + b2) / 2.0
-            #标记位，表明有参数经过改动，所以迭代次数要重制
+            #标记位，表明有参数经过改动，所以迭代次数要重置
             alphaPairsChange += 1
             print('iter : %d , i %d , pairs changed %d', iter , i , alphaPairsChange)
         if(alphaPairsChange == 0): iter += 1
@@ -122,8 +120,13 @@ class optStruct:
         self.eCache = mat(zeros((self.m,2)))
 
 #函数的作用：传入自定义的最优化结构和待选的数据k，然后计算误差并返回
-def calcEK(OS, k):
-    FXK = float(multiply(OS.alphas , OS.labelMat).T * (OS.X * OS.X[k,:].T)) + OS.b
+# def calcEK(OS, k):
+#     FXK = float(multiply(OS.alphas , OS.labelMat).T * (OS.X * OS.X[k,:].T)) + OS.b
+#     EK = FXK - float(OS.labelMat[k])
+#     return EK
+
+def calcEK(OS , k):
+    FXK = float(multiply(OS.alphas , OS.labelMat).T * OS.K[:,k] + OS.b)
     EK = FXK - float(OS.labelMat[k])
     return EK
 
@@ -156,7 +159,7 @@ def update(OS , k):
 def innerL(i, OS):
     Ei = calcEK(OS,i)
     #选择的i值满足优化条件
-    if(((OS.labelMat[i] * Ei < -OS.totor) and (OS.alphas[i] < OS.C)) or \
+    if(((OS.labelMat[i] * Ei < -OS.totor) and (OS.alphas[i] < OS.C)) or
             ((OS.labelMat[i] * Ei > OS.totor) and (OS.alphas[i] > 0))):
         j,Ej,= selectJ(i , OS , Ei)
         alphaIold = OS.alphas[i].copy()
@@ -167,8 +170,9 @@ def innerL(i, OS):
         else:
             L = max(0 , OS.alphas[j] + OS.alphas[i] - OS.C)
             H = min(OS.C , OS.alphas[j] + OS.alphas[i])
-        if(L == H):print('L ==H'); return 0
-        eta = 2.0 * OS.X[i,:] * OS.X[j,:].T - OS.X[i,:] * OS.X[i,:].T - OS.X[j,:] * OS.X[j,:].T
+        if(L == H):print('L == H'); return 0
+        #eta = 2.0 * OS.X[i,:] * OS.X[j,:].T - OS.X[i,:] * OS.X[i,:].T - OS.X[j,:] * OS.X[j,:].T
+        eta = 2.0 * OS.K[i,j] - OS.K[i,i] - OS.K[j,j]
         if(eta >= 0):print('eta >=0');return 0
         OS.alphas[j] -= OS.labelMat[j] * (Ei - Ej) / eta
         OS.alphas[j] = clipAlpha(OS.alphas[j] , H , L)
@@ -179,13 +183,18 @@ def innerL(i, OS):
         OS.alphas[i] = alphaIold + OS.labelMat[i] * OS.labelMat[j] * (alphaJold - OS.alphas[j])
         update(OS,i)
         #计算两个b的值
-        b1 = OS.b - Ei - OS.labelMat[i]* (OS.alphas[i] - alphaIold) *\
-        OS.X[i,:] * OS.X[i,:].T - OS.labelMat[j] *\
-             (OS.alphas[j] - alphaJold) * OS.X[i,:] * OS.X[j,:].T
-        b2 = OS.b - Ej - OS.labelMat[i] * (OS.alphas[i] - alphaIold) *\
-        OS.X[i,:] * OS.X[j,:].T - OS.labelMat[j] *\
-             (OS.alphas[j] - alphaJold) * OS.X[j,:] * OS.X[j,:].T
-        if(OS.alphas[i] > 0) and (OS.alphas[i] < OS.C): OS.labelMat = b1
+        # b1 = OS.b - Ei - OS.labelMat[i]* (OS.alphas[i] - alphaIold) *\
+        # OS.X[i,:] * OS.X[i,:].T - OS.labelMat[j] *\
+        #      (OS.alphas[j] - alphaJold) * OS.X[i,:] * OS.X[j,:].T
+
+        b1 = OS.b - Ei - OS.labelMat[i] * (OS.alphas[i] - alphaIold) * OS.K[i,i] - \
+            OS.labelMat[j] * (OS.alphas[j] - alphaJold) * OS.K[i,j]
+        # b2 = OS.b - Ej - OS.labelMat[i] * (OS.alphas[i] - alphaIold) *\
+        # OS.X[i,:] * OS.X[j,:].T - OS.labelMat[j] *\
+        #      (OS.alphas[j] - alphaJold) * OS.X[j,:] * OS.X[j,:].T
+        b2 = OS.b - Ej - OS.labelMat[i] * (OS.alphas[i] - alphaIold) * OS.K[i,j] -\
+            OS.labelMat[j] * (OS.alphas[j] - alphaJold) * OS.K[j,j]
+        if(OS.alphas[i] > 0) and (OS.alphas[i] < OS.C): OS.b = b1
         elif(OS.alphas[j] > 0) and (OS.alphas[j] < OS.C): OS.b = b2
         else:OS.b = (b1 + b2) / 2.0
         return 1
@@ -194,8 +203,7 @@ def innerL(i, OS):
 
 #外循环选择函数
 def smoP(dataMaIn , labelMat , C , totor , maxIter , kTup = ('lin',0)):
-    OS = optStruct(mat(dataMaIn) , mat(labelMat).transpose() , C , totor)
-    print(OS.alphas)
+    OS = newOptStruct(mat(dataMaIn) , mat(labelMat).transpose() , C , totor , kTup)
     iter = 0
     entirSet = True
     alphaPairsChanged = 0
@@ -231,7 +239,7 @@ def kernelTrans(X , A , KTup):
         for j in range(m):
             deltaRow = X[j,:] - A
             K[j] = deltaRow * deltaRow.T
-        K = math.exp(K / (-2 * KTup[1]**2))
+        K = exp(K / (-1 * KTup[1]**2))
     else:
         raise NameError('Kernal is not recognized!')
     return K
@@ -243,8 +251,60 @@ class newOptStruct:
         self.C = C
         self.totor = totor
         self.m = shape(dataMatIn)[0]
+        self.alphas = mat(zeros((self.m,1)))
         self.b = 0
         self.eCache = mat(zeros((self.m,2)))
         self.K = mat(zeros((self.m,self.m)))
         for i in range(self.m):
             self.K[:,i] = kernelTrans(self.X , self.X[i,:] , kTup)
+
+
+def testRbf(k1 = 1.3):
+    dataArr , labelArr = loadDataSet('CH06_data/testSetrBF.txt')
+    b , alphas = smoP(dataArr , labelArr , 200 , 0.0001 , 10000 , ('rbf' , k1))
+    # print(b)
+    # print(alphas)
+    dataMat = mat(dataArr)
+    labelMat = mat(labelArr).transpose()
+    #取出非零的alpha值，代表的是全部的支持向量点
+    svInd = nonzero(alphas > 0)[0]
+    sVs = dataMat[svInd]
+    print('***********************')
+    print(sVs)
+    print('***********************')
+    labelSv = labelMat[svInd]
+    #print('there are $d support vectors' % shape(sVs))
+    m,n = shape(dataMat)
+    errorCount = 0.0
+    #定义如何对数据进行分类，因为已经训练出了支持向量，所以在预测的过程中只用使用支持向量点
+    for i in range(m):
+        kernalEval = kernelTrans(sVs , dataMat[i,:],('rbf',k1))
+        predict = kernalEval.T * multiply(labelSv , alphas[svInd]) + b
+        if(sign(predict) != sign(labelArr[i])):
+            errorCount += 1
+    print('分类的错误率是 %f'  % (float(errorCount / m)))
+    print('\n')
+    print('*******************我是华丽的分割线*******************')
+    dataArr, labelArr = loadDataSet('CH06_data/testSetrBF.txt')
+    b, alphas = smoP(dataArr, labelArr, 200, 0.0001, 10000, ('rbf', k1))
+    # print(b)
+    # print(alphas)
+    dataMat = mat(dataArr)
+    labelMat = mat(labelArr).transpose()
+    # 取出非零的alpha值，代表的是全部的支持向量点
+    svInd = nonzero(alphas > 0)[0]
+    sVs = dataMat[svInd]
+    print('***********************')
+    print(sVs)
+    print('***********************')
+    labelSv = labelMat[svInd]
+    # print('there are $d support vectors' % shape(sVs))
+    m, n = shape(dataMat)
+    errorCount = 0.0
+    # 定义如何对数据进行分类，因为已经训练出了支持向量，所以在预测的过程中只用使用支持向量点
+    for i in range(m):
+        kernalEval = kernelTrans(sVs, dataMat[i, :], ('rbf', k1))
+        predict = kernalEval.T * multiply(labelSv, alphas[svInd]) + b
+        if (sign(predict) != sign(labelArr[i])):
+            errorCount += 1
+    print('分类的错误率是 %f' % (float(errorCount / m)))

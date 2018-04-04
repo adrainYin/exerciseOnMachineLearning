@@ -121,7 +121,7 @@ def calcMostFreq(vocaList,fullText):
     return sortedFreq[:30]  #输出前30个
 
 def localWords(feed1,feed0):
-    import feedparser
+
     docList = []; classList = []; fullText = []
     minLen = min(len(feed1['entries']),len(feed0['entries']))
     for i in range(minLen):
