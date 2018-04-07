@@ -85,7 +85,9 @@ def adaBoostingTrain(dataArr , classLabels , numIt = 40):
         print('total error : ', erroeRate ,'\n')
         if erroeRate == 0.0:
             break
-    return weakClassArr
+    return weakClassArr , aggClassEst
+
+
 """这里定义的函数是用多分类器对数据进行分类。其中classifierArr是多分类器数组。训练好的分类器存入,datToClass是测试样本
     返回值是数据的预测分类"""
 def adaClassify(datToClass , classsifierArr):
@@ -98,6 +100,7 @@ def adaClassify(datToClass , classsifierArr):
         aggClassEst += classsifierArr[i]['alpha'] * classEst
         print(aggClassEst)
     return sign(aggClassEst)
+
 
 def loadDataSet(filename):
     #取得列表的列个数
@@ -115,6 +118,38 @@ def loadDataSet(filename):
         labelMat.append(float(curLine[-1]))
     return dataMat , labelMat
 
-
-
-
+"""绘制ROC曲线函数 ， 有两个参数
+第一个参数是分类器的预测强度，也就是没有经过标准化吃处理的原始的分类数据。输入格式是向量或者numpy矩阵
+第二个参数是数据的真实分类情况
+"""
+def plotROC(predStrengths , classLabels):
+    import matplotlib.pyplot as plt
+    cur = (1.0 ,1.0)
+    ySum = 0.0
+    #取得真实分类为正例的数量
+    numPosClass = sum(array(classLabels) == 1.0)
+    yStep = 1 / float(numPosClass)
+    xStep = 1 / float(len(classLabels) - numPosClass)
+    #对预测强度按照从强到弱的顺序进行排序
+    sortedPredStrengths = predStrengths.argsort()
+    fig = plt.figure()
+    fig.clf()
+    ax = plt.subplot(111)
+    for index in sortedPredStrengths.tolist()[0]:
+        if classLabels[index] == 1.0:
+            delX = 0.0
+            delY = yStep
+        else:
+            delX = xStep
+            delY = 0.0
+            ySum += cur[1]
+        ax.plot([cur[0] , cur[0] - delX] , [cur[1] , cur[1] - delY] , c = 'b')
+        cur = (cur[0] - delX , cur[1] - delY)
+    #绘制plot图形， 第一个参数是x轴的点坐标，第二个参数是y轴的点坐标，第三个参数是对颜色的设置
+    ax.plot([0,1] , [0,1] ,'b--')
+    plt.xlabel('False Positive rate')
+    plt.ylabel('True Positivee Rate')
+    plt.title('ROC curve')
+    ax.axis([0,1,0,1])
+    plt.show()
+    print('the Area Under the curve is :' , ySum * xStep)
